@@ -1,0 +1,25 @@
+ {
+   "name": "@cliff/core",
+   "version": "0.0.1",
+   "type": "module",
+   "main": "./dist/index.js",
+   "types": "./dist/index.d.ts",
+   "exports": {
+     ".": {
+       "import": "./dist/index.js",
+       "types": "./dist/index.d.ts"
+     }
+   },
+   "files": ["dist"],
+   "scripts": {
+     "dev": "tsup src/index.ts --format esm --dts --watch",
+     "build": "tsup src/index.ts --format esm --dts --clean",
+     "test": "vitest run"
+   },
+   "dependencies": {
+     "@cliff/ui": "workspace:*"
+   },
+   "devDependencies": {
+     "tsup": "^8.3.0"
+   }
+ }
