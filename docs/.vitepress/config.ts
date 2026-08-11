@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-  title: 'CLI Framework',
+  base: '/cliff/',
+  title: 'cliff',
   description: 'The Next.js for CLI tools — build production-grade CLIs with zero boilerplate',
   lang: 'en-US',
 
