@@ -32,7 +32,7 @@ importers:
 
   packages/core:
     dependencies:
-      '@cli-framework/ui':
+      '@cliff/ui':
         specifier: workspace:*
         version: link:../ui
     devDependencies:
@@ -42,7 +42,7 @@ importers:
 
   packages/create-cli:
     dependencies:
-      '@cli-framework/ui':
+      '@cliff/ui':
         specifier: workspace:*
         version: link:../ui
     devDependencies:
@@ -52,7 +52,7 @@ importers:
 
   packages/test:
     dependencies:
-      '@cli-framework/core':
+      '@cliff/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
