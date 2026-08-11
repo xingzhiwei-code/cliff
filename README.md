@@ -1,6 +1,6 @@
 # cliff
 
-[![Docs](https://img.shields.io/badge/docs-github_pages-brightgreen)](https://xingzhiwei-code.github.io/cliff/)
+[![Docs](https://img.shields.io/badge/docs-github%20pages-brightgreen)](https://xingzhiwei-code.github.io/cliff/)
 
 
 The Next.js for CLI tools — build production-grade command-line tools with zero boilerplate.
