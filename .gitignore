@@ -6,3 +6,4 @@ coverage
 .turbo
 docs/.vitepress/dist
 docs/.vitepress/cache
+outputs/
