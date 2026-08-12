@@ -3,6 +3,8 @@ import { join, relative } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import * as ui from '@cliff/ui';
 import type { Command, CommandDef, CliOptions, Plugin } from './types';
+import { discoverPlugins } from './plugin';
+import { checkForUpdates } from './update';
 import { parseArgs } from './parser';
 import { generateHelp, generateRootHelp } from './help';
 import { loadConfig, loadEnv, envPrefix, resolveOptions } from './config';
@@ -37,6 +39,14 @@ export class Cli {
   }
 
   /** Discover commands from the filesystem. */
+
+  /** Discover plugins from the filesystem. */
+  async discoverAllPlugins(baseDir: string): Promise<void> {
+    const plugins = await discoverPlugins(baseDir, this.options.pluginsDir);
+    for (const plugin of plugins) {
+      this.use(plugin);
+    }
+  }
   async discover(baseDir: string): Promise<void> {
     const dir = join(baseDir, this.options.commandsDir!);
     if (!existsSync(dir)) return;
@@ -97,6 +107,11 @@ export class Cli {
 
   /** Run the CLI with the given arguments. */
   async run(args: string[] = process.argv.slice(2)): Promise<void> {
+
+    // Check for updates (non-blocking)
+    if (this.options.version) {
+      checkForUpdates(this.options.name, this.options.version).catch(() => {});
+    }
     if (args.length === 0) {
       this.showRootHelp();
       return;

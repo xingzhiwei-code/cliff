@@ -195,9 +195,9 @@ cli-framework/
 - [x] 测试覆盖率提升：53 tests (color, parser, table, spinner, help, cli, generate)
 
 ### Phase 3 — 生态建设
-- [ ] 插件系统
-- [ ] man page 生成
-- [ ] 更新通知
+- [x] 插件系统
+- [x] man page 生成
+- [x] 更新通知
 - [ ] 插件市场
 - [ ] 社区模板
 

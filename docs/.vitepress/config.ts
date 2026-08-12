@@ -52,6 +52,8 @@ export default defineConfig({
               text: '进阶',
               items: [
                 { text: '插件系统', link: '/zh/guide/plugins' },
+                { text: '更新通知', link: '/zh/guide/update-notification' },
+                { text: 'Man 手册', link: '/zh/guide/man-page' },
                 { text: '测试', link: '/zh/guide/testing' },
               ],
             },
@@ -109,6 +111,8 @@ export default defineConfig({
           text: 'Advanced',
           items: [
             { text: 'Plugins', link: '/guide/plugins' },
+            { text: 'Update Notification', link: '/guide/update-notification' },
+            { text: 'Man Page', link: '/guide/man-page' },
             { text: 'Testing', link: '/guide/testing' },
           ],
         },

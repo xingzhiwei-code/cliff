@@ -4,6 +4,8 @@
 
 ## 定义插件
 
+使用 `definePlugin` 获得类型安全的插件定义：
+
 ```ts
 import { definePlugin } from '@cliff/core';
 
@@ -31,6 +33,28 @@ export default definePlugin({
     },
   },
 });
+```
+
+## 自动发现
+
+将插件放在 `plugins/` 目录中，它们会被自动加载：
+
+```
+src/
+├── plugins/
+│   ├── docker.ts
+│   └── slack.ts
+├── commands/
+│   └── deploy.ts
+└── index.ts
+```
+
+```ts
+// src/index.ts
+const cli = createCli({ name: 'my-tool' });
+await cli.discoverAllPlugins(__dirname);
+await cli.discover(__dirname);
+await cli.run();
 ```
 
 ## 加载插件

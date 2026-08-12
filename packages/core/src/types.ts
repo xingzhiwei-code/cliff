@@ -86,6 +86,8 @@
    description?: string;
    /** Directory to scan for commands (relative to project root). */
    commandsDir?: string;
+  /** Directory to scan for plugins (relative to project root). */
+  pluginsDir?: string;
    /** Plugins to load. */
    plugins?: Plugin[];
    /** Enable debug mode. */

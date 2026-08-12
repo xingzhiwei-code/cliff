@@ -4,6 +4,8 @@ Extend your CLI with a first-class plugin system. Plugins can add commands, life
 
 ## Defining a Plugin
 
+Use `definePlugin` for type-safe plugin definitions:
+
 ```ts
 import { definePlugin } from '@cliff/core';
 
@@ -31,6 +33,28 @@ export default definePlugin({
     },
   },
 });
+```
+
+## Auto-Discovery
+
+Place plugins in a `plugins/` directory and they will be automatically loaded:
+
+```
+src/
+├── plugins/
+│   ├── docker.ts
+│   └── slack.ts
+├── commands/
+│   └── deploy.ts
+└── index.ts
+```
+
+```ts
+// src/index.ts
+const cli = createCli({ name: 'my-tool' });
+await cli.discoverAllPlugins(__dirname);
+await cli.discover(__dirname);
+await cli.run();
 ```
 
 ## Loading Plugins
