@@ -58,7 +58,16 @@ export default defineConfig({
               ],
             },
           ],
-          '/zh/api/': [
+          '/zh/tutorials/': [
+        {
+          text: '教程',
+          items: [
+            { text: '开发一个插件', link: '/zh/tutorials/building-a-plugin' },
+            { text: '开发一个 CLI 应用', link: '/zh/tutorials/building-a-cli-app' },
+          ],
+        },
+      ],
+      '/zh/api/': [
             {
               text: '包',
               items: [
@@ -77,6 +86,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/guide/getting-started' },
+      { text: 'Tutorials', link: '/tutorials/building-a-plugin' },
       { text: 'API', link: '/api/core' },
     ],
     sidebar: {
@@ -114,6 +124,15 @@ export default defineConfig({
             { text: 'Update Notification', link: '/guide/update-notification' },
             { text: 'Man Page', link: '/guide/man-page' },
             { text: 'Testing', link: '/guide/testing' },
+          ],
+        },
+      ],
+      '/tutorials/': [
+        {
+          text: 'Tutorials',
+          items: [
+            { text: 'Building a Plugin', link: '/tutorials/building-a-plugin' },
+            { text: 'Building a CLI App', link: '/tutorials/building-a-cli-app' },
           ],
         },
       ],
