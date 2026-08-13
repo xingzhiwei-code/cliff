@@ -1,8 +1,9 @@
 import { createCli } from '@cliff/core';
-import { fileURLToPath } from 'node:url';
-import { dirname } from 'node:path';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+import type { CommandDef } from '@cliff/core';
+import requestCommand from './commands/request';
+import collectionList from './commands/collection/list';
+import collectionRun from './commands/collection/run';
+import collectionDelete from './commands/collection/delete';
 
 const cli = createCli({
   name: 'api',
@@ -10,6 +11,10 @@ const cli = createCli({
   description: 'API debugging tool — curl for the TypeScript era',
 });
 
-await cli.discoverAllPlugins(__dirname);
-await cli.discover(__dirname);
+// Register commands with full names (subcommands use parent prefix)
+cli.register(requestCommand.def as CommandDef);
+cli.register({ ...collectionList.def, name: 'collection list' } as CommandDef);
+cli.register({ ...collectionRun.def, name: 'collection run' } as CommandDef);
+cli.register({ ...collectionDelete.def, name: 'collection delete' } as CommandDef);
+
 await cli.run();
