@@ -53,7 +53,7 @@
      expect(pkg.type).toBe('module');
    });
  
-   it('package.json depends on @cliff/core and ui', () => {
+   it('package.json depends on @cliffx/core and ui', () => {
      const opts: GenerateOptions = {
        name: 'my-tool',
        dir,
@@ -64,8 +64,8 @@
      generateProject(opts);
  
      const pkg = JSON.parse(readFileSync(join(dir, 'package.json'), 'utf-8'));
-     expect(pkg.dependencies['@cliff/core']).toBeDefined();
-     expect(pkg.dependencies['@cliff/ui']).toBeDefined();
+     expect(pkg.dependencies['@cliffx/core']).toBeDefined();
+     expect(pkg.dependencies['@cliffx/ui']).toBeDefined();
    });
  
    it('entry point imports createCli and defineCommand', () => {

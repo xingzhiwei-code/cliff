@@ -5,7 +5,7 @@ cliff 提供了一整套终端输出组件 — 无需 chalk，无需额外库。
 ## 基本输出
 
 ```ts
-import { log, success, warn, error, info } from '@cliff/ui';
+import { log, success, warn, error, info } from '@cliffx/ui';
 
 ui.log('正在处理文件...');     // │ 正在处理文件...
 ui.success('构建完成！');      // ✔ 构建完成！
@@ -17,7 +17,7 @@ ui.info('使用默认设置');       // ℹ 使用默认设置
 ## 分区标题
 
 ```ts
-import { section } from '@cliff/ui';
+import { section } from '@cliffx/ui';
 
 ui.section('部署');
 // 部署
@@ -29,7 +29,7 @@ ui.section('部署');
 显示带自动对齐的表格数据：
 
 ```ts
-import { table } from '@cliff/ui';
+import { table } from '@cliffx/ui';
 
 const results = [
   { name: 'main.js', size: '42K', time: '1.2s' },
@@ -79,7 +79,7 @@ ui.stdout(JSON.stringify(result));
 也提供底层颜色函数：
 
 ```ts
-import { c, red, green, blue, yellow, cyan, gray, dim, bold, underline } from '@cliff/ui';
+import { c, red, green, blue, yellow, cyan, gray, dim, bold, underline } from '@cliffx/ui';
 
 // 链式构建器
 console.log(c('成功！').green().bold().toString());

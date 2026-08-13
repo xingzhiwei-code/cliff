@@ -1,6 +1,6 @@
- // @cliff/test — Test utilities for CLI tools
- import { Cli } from '@cliff/core';
- import type { CommandDef, CliOptions } from '@cliff/core';
+ // @cliffx/test — Test utilities for CLI tools
+ import { Cli } from '@cliffx/core';
+ import type { CommandDef, CliOptions } from '@cliffx/core';
  
  /** Options for creating a test app. */
  export interface TestAppOptions {

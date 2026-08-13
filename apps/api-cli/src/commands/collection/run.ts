@@ -1,4 +1,4 @@
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { homedir } from 'node:os';
@@ -59,7 +59,7 @@ export default defineCommand({
     if (!saved) { ui.error(`Request "${name}" not found.`); process.exit(1); }
 
     const headers = parseHeaders(saved.headers);
-    const body = saved.body || undefined;
+    const body = saved.body && saved.body !== 'undefined' ? saved.body : undefined;
 
     const result = await ui.spinner(`${saved.method} ${saved.url}`, () => sendRequest(saved.method, saved.url, headers, body));
 

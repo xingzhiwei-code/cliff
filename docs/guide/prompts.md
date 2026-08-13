@@ -79,7 +79,7 @@ const token = await ui.password('Enter API token');
 Multi-step wizard:
 
 ```ts
-import { steps } from '@cliff/ui';
+import { steps } from '@cliffx/ui';
 
 const results = await ui.steps([
   {

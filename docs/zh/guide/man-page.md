@@ -5,7 +5,7 @@ cliff 可以为你的 CLI 工具生成 Unix man 手册页，格式为 troff。
 ## 生成 Man 手册
 
 ```ts
-import { generateManPage, printManPage } from '@cliff/core';
+import { generateManPage, printManPage } from '@cliffx/core';
 
 // 生成字符串
 const manPage = generateManPage('my-tool', '1.0.0', '我的 CLI 工具', cli.getCommands());

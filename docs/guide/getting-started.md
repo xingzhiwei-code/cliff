@@ -27,7 +27,7 @@ CLI Framework provides all of these capabilities in a single, cohesive package â
 
 ```ts
 // commands/deploy.ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'deploy',

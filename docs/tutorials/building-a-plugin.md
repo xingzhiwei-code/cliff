@@ -1,6 +1,6 @@
 # Building a Plugin
 
-This tutorial walks through building `@cliff/plugin-docker` — a Docker integration plugin that adds 5 commands to your CLI. You'll learn how to use `definePlugin`, lifecycle hooks, and command registration.
+This tutorial walks through building `@cliffx/plugin-docker` — a Docker integration plugin that adds 5 commands to your CLI. You'll learn how to use `definePlugin`, lifecycle hooks, and command registration.
 
 ## What You'll Build
 
@@ -28,7 +28,7 @@ packages/plugin-docker/
 
 ```json
 {
-  "name": "@cliff/plugin-docker",
+  "name": "@cliffx/plugin-docker",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -37,8 +37,8 @@ packages/plugin-docker/
     "build": "tsup src/index.ts --format esm --dts --clean"
   },
   "dependencies": {
-    "@cliff/core": "workspace:*",
-    "@cliff/ui": "workspace:*"
+    "@cliffx/core": "workspace:*",
+    "@cliffx/ui": "workspace:*"
   }
 }
 ```
@@ -48,7 +48,7 @@ packages/plugin-docker/
 Create `src/index.ts`:
 
 ```ts
-import type { Plugin } from '@cliff/core';
+import type { Plugin } from '@cliffx/core';
 import { execSync } from 'node:child_process';
 
 // Helper: run a docker command
@@ -65,7 +65,7 @@ function checkDockerDaemon(): boolean {
 }
 
 export const pluginDocker: Plugin = {
-  name: '@cliff/plugin-docker',
+  name: '@cliffx/plugin-docker',
 
   // Lifecycle hooks
   hooks: {
@@ -105,8 +105,8 @@ export default pluginDocker;
 In your CLI entry point:
 
 ```ts
-import { createCli } from '@cliff/core';
-import pluginDocker from '@cliff/plugin-docker';
+import { createCli } from '@cliffx/core';
+import pluginDocker from '@cliffx/plugin-docker';
 
 const cli = createCli({
   name: 'my-tool',
@@ -121,7 +121,7 @@ await cli.run();
 
 **`definePlugin`** provides type-safe plugin definitions. You can also use the raw `Plugin` interface — `definePlugin` is just a convenience wrapper.
 
-**Command naming** — plugin commands use the plugin name as a namespace prefix. `@cliff/plugin-docker` → `docker:build`, `docker:push`, etc.
+**Command naming** — plugin commands use the plugin name as a namespace prefix. `@cliffx/plugin-docker` → `docker:build`, `docker:push`, etc.
 
 **Lifecycle hooks** fire at specific points in the CLI lifecycle:
 - `before:run` — before any command executes (ideal for validation)

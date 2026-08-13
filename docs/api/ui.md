@@ -1,11 +1,11 @@
-# @cliff/ui
+# @cliffx/ui
 
 The UI package provides terminal output components, interactive prompts, spinners, progress bars, and ANSI color utilities — all with zero external dependencies.
 
 ## Installation
 
 ```bash
-pnpm add @cliff/ui
+pnpm add @cliffx/ui
 ```
 
 ## Output Functions
@@ -15,7 +15,7 @@ pnpm add @cliff/ui
 Write styled messages to stderr.
 
 ```ts
-import { log, success, warn, error, info } from '@cliff/ui';
+import { log, success, warn, error, info } from '@cliffx/ui';
 
 log('Processing...');       // │ Processing...
 success('Done!');           // ✔ Done!
@@ -29,7 +29,7 @@ info('Using defaults');     // ℹ Using defaults
 Write a section header.
 
 ```ts
-import { section } from '@cliff/ui';
+import { section } from '@cliffx/ui';
 
 section('Build');
 // Build
@@ -41,7 +41,7 @@ section('Build');
 Write data to stdout (for pipeable output).
 
 ```ts
-import { stdout } from '@cliff/ui';
+import { stdout } from '@cliffx/ui';
 
 stdout(JSON.stringify({ status: 'ok' }));
 ```
@@ -51,7 +51,7 @@ stdout(JSON.stringify({ status: 'ok' }));
 Write a blank line to stderr.
 
 ```ts
-import { newline } from '@cliff/ui';
+import { newline } from '@cliffx/ui';
 
 newline();
 ```
@@ -63,7 +63,7 @@ newline();
 Render tabular data with box-drawing borders.
 
 ```ts
-import { table } from '@cliff/ui';
+import { table } from '@cliffx/ui';
 
 table(data, ['name', 'size', 'time'], {
   headers: ['File', 'Size', 'Duration'],
@@ -91,7 +91,7 @@ interface TableOptions {
 Yes/no confirmation.
 
 ```ts
-import { confirm } from '@cliff/ui';
+import { confirm } from '@cliffx/ui';
 
 const ok = await confirm('Continue?'); // defaults to true
 // ? Continue? (Y/n)
@@ -102,7 +102,7 @@ const ok = await confirm('Continue?'); // defaults to true
 Single-choice list with arrow keys.
 
 ```ts
-import { select } from '@cliff/ui';
+import { select } from '@cliffx/ui';
 
 const choice = await select('Pick one', [
   { label: 'Option A', value: 'a', hint: 'recommended' },
@@ -127,7 +127,7 @@ function select<T = string>(message: string, choices: Choice<T>[]): Promise<T>;
 Multi-choice list with space to toggle.
 
 ```ts
-import { multiselect } from '@cliff/ui';
+import { multiselect } from '@cliffx/ui';
 
 const selected = await multiselect('Pick many', [
   { label: 'TypeScript', value: 'ts' },
@@ -140,7 +140,7 @@ const selected = await multiselect('Pick many', [
 Free-form text input with validation.
 
 ```ts
-import { input } from '@cliff/ui';
+import { input } from '@cliffx/ui';
 
 const name = await input('Project name', {
   default: 'my-app',
@@ -153,7 +153,7 @@ const name = await input('Project name', {
 Hidden input for sensitive data.
 
 ```ts
-import { password } from '@cliff/ui';
+import { password } from '@cliffx/ui';
 
 const token = await password('API token');
 // ? API token: ****
@@ -166,7 +166,7 @@ const token = await password('API token');
 Wrap an async operation with a spinner.
 
 ```ts
-import { spinner } from '@cliff/ui';
+import { spinner } from '@cliffx/ui';
 
 const result = await spinner('Loading...', async () => {
   return await fetchData();
@@ -178,7 +178,7 @@ const result = await spinner('Loading...', async () => {
 Class for manual spinner control.
 
 ```ts
-import { Spinner } from '@cliff/ui';
+import { Spinner } from '@cliffx/ui';
 
 const spin = new Spinner('Working...');
 spin.start();
@@ -193,7 +193,7 @@ spin.fail('Failed!');
 Batch progress bar.
 
 ```ts
-import { progress } from '@cliff/ui';
+import { progress } from '@cliffx/ui';
 
 await progress(100, async (tick) => {
   for (const item of items) {
@@ -208,7 +208,7 @@ await progress(100, async (tick) => {
 Class for manual progress control.
 
 ```ts
-import { Progress } from '@cliff/ui';
+import { Progress } from '@cliffx/ui';
 
 const bar = new Progress({ total: 100, width: 40 });
 bar.update(50);
@@ -232,7 +232,7 @@ interface ProgressOptions {
 Multi-step wizard.
 
 ```ts
-import { steps } from '@cliff/ui';
+import { steps } from '@cliffx/ui';
 
 const results = await steps([
   { title: 'Install', run: () => installDeps() },
@@ -255,7 +255,7 @@ interface Step {
 ### Direct color functions
 
 ```ts
-import { red, green, yellow, blue, cyan, gray, dim, bold, underline } from '@cliff/ui';
+import { red, green, yellow, blue, cyan, gray, dim, bold, underline } from '@cliffx/ui';
 
 console.log(red('Error'));
 console.log(green('OK'));
@@ -265,7 +265,7 @@ console.log(bold('Important'));
 ### Chainable builder
 
 ```ts
-import { c } from '@cliff/ui';
+import { c } from '@cliffx/ui';
 
 console.log(c('Warning').yellow().bold().toString());
 console.log(c('Title').brightBlue().bold().toString());
@@ -274,7 +274,7 @@ console.log(c('Title').brightBlue().bold().toString());
 ### Utility functions
 
 ```ts
-import { supportsColor, stripColor, visibleLength } from '@cliff/ui';
+import { supportsColor, stripColor, visibleLength } from '@cliffx/ui';
 
 supportsColor(); // true if terminal supports color
 stripColor('\x1b[31mred\x1b[0m'); // 'red'
@@ -284,7 +284,7 @@ visibleLength('hello'); // 5 (ignores ANSI codes)
 ## Types
 
 ```ts
-import type { Ui, Choice, TableOptions, ProgressOptions, Step } from '@cliff/ui';
+import type { Ui, Choice, TableOptions, ProgressOptions, Step } from '@cliffx/ui';
 ```
 
 The `Ui` interface is the type of the `ui` object injected into `run()` functions.

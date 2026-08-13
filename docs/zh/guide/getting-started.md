@@ -27,7 +27,7 @@ cliff 在一个统一的包中提供所有这些能力 — 零运行时依赖。
 
 ```ts
 // commands/deploy.ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'deploy',

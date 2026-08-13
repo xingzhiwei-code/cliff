@@ -57,7 +57,7 @@ async run({ config, ui }) {
 The `loadConfig` function is also exported for direct use:
 
 ```ts
-import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliff/core';
+import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliffx/core';
 
 const config = loadConfig('my-tool');
 // config.values → { env: 'production', ... }

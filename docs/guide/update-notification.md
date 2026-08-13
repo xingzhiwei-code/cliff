@@ -34,7 +34,7 @@ const cli = createCli({
 You can also use the check function directly:
 
 ```ts
-import { checkForUpdates } from '@cliff/core';
+import { checkForUpdates } from '@cliffx/core';
 
 const result = await checkForUpdates('my-tool', '1.0.0');
 if (result?.outdated) {

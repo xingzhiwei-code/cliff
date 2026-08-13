@@ -1,11 +1,11 @@
-# @cliff/core
+# @cliffx/core
 
 The core package provides the command system, argument parser, help generator, error handling, configuration management, and shell completion.
 
 ## Installation
 
 ```bash
-pnpm add @cliff/core
+pnpm add @cliffx/core
 ```
 
 ## Exports
@@ -15,7 +15,7 @@ pnpm add @cliff/core
 Define a command with full type inference for options.
 
 ```ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'deploy',
@@ -48,7 +48,7 @@ export default defineCommand({
 Create a CLI instance.
 
 ```ts
-import { createCli } from '@cliff/core';
+import { createCli } from '@cliffx/core';
 
 const cli = createCli({
   name: 'my-tool',
@@ -90,7 +90,7 @@ The CLI class instance returned by `createCli`.
 Parse raw argv strings against option definitions.
 
 ```ts
-import { parseArgs } from '@cliff/core';
+import { parseArgs } from '@cliffx/core';
 
 const options = parseArgs(['--env', 'prod', '--force'], {
   env: { type: 'string', default: 'staging' },
@@ -105,7 +105,7 @@ const options = parseArgs(['--env', 'prod', '--force'], {
 Generate formatted help text.
 
 ```ts
-import { generateHelp, generateRootHelp } from '@cliff/core';
+import { generateHelp, generateRootHelp } from '@cliffx/core';
 
 const helpText = generateHelp(command, 'my-tool');
 const rootHelp = generateRootHelp('my-tool', '1.0.0', 'Description', cmds);
@@ -116,7 +116,7 @@ const rootHelp = generateRootHelp('my-tool', '1.0.0', 'Description', cmds);
 Generate shell completion scripts.
 
 ```ts
-import { generateCompletion, printCompletion } from '@cliff/core';
+import { generateCompletion, printCompletion } from '@cliffx/core';
 
 const script = generateCompletion(cli);
 printCompletion(cli); // writes to stdout
@@ -127,7 +127,7 @@ printCompletion(cli); // writes to stdout
 Configuration management utilities.
 
 ```ts
-import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliff/core';
+import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliffx/core';
 
 const config = loadConfig('my-tool');
 // { values: { env: 'production' }, source: '/path/.my-tool.yml' }
@@ -143,7 +143,7 @@ const final = resolveOptions(cliArgs, env, config.values, optionsDef);
 Error formatting utilities.
 
 ```ts
-import { prettyError, getErrorHint } from '@cliff/core';
+import { prettyError, getErrorHint } from '@cliffx/core';
 
 const formatted = prettyError(new Error('Something broke'));
 const hint = getErrorHint(new Error('Connection refused'));
@@ -156,7 +156,7 @@ const hint = getErrorHint(new Error('Connection refused'));
 import type {
   Command, CommandDef, OptionsDef, OptionDef, OptionType,
   RunContext, ResolvedOptions, Plugin, CliOptions,
-} from '@cliff/core';
+} from '@cliffx/core';
 ```
 
 | Type | Description |

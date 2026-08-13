@@ -48,7 +48,7 @@ The framework provides automatic hints for common error types:
 You can use the error utilities directly:
 
 ```ts
-import { prettyError, getErrorHint } from '@cliff/core';
+import { prettyError, getErrorHint } from '@cliffx/core';
 
 try {
   await riskyOperation();

@@ -1,4 +1,4 @@
-import { error as _error, warn, log, dim } from '@cliff/ui';
+import { error as _error, warn, log, dim } from '@cliffx/ui';
 
 /** Format and display a user-friendly error. */
 export function prettyError(err: Error, debug = false): void {

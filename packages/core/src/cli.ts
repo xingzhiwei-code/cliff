@@ -1,7 +1,7 @@
 import { readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import * as ui from '@cliff/ui';
+import * as ui from '@cliffx/ui';
 import type { Command, CommandDef, CliOptions, Plugin } from './types';
 import { discoverPlugins } from './plugin';
 import { checkForUpdates } from './update';
@@ -193,7 +193,7 @@ export class Cli {
     try {
       await def.run({
         options: finalOptions,
-        ui: ui as unknown as import('@cliff/ui').Ui,
+        ui: ui as unknown as import('@cliffx/ui').Ui,
         config: this.loadedConfig,
         args: remainingArgs,
         cli: this,

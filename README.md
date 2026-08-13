@@ -7,7 +7,7 @@ The Next.js for CLI tools — build production-grade command-line tools with zer
 
 ```ts
 // commands/deploy.ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'deploy',
@@ -48,9 +48,9 @@ pnpm dev
 
 | Package | Description |
 |---------|-------------|
-| `@cliff/core` | Command system, parser, help, config, shell completion |
-| `@cliff/ui` | Terminal UI — output, prompts, spinners, tables, colors |
-| `@cliff/test` | Test harness for CLI integration testing |
+| `@cliffx/core` | Command system, parser, help, config, shell completion |
+| `@cliffx/ui` | Terminal UI — output, prompts, spinners, tables, colors |
+| `@cliffx/test` | Test harness for CLI integration testing |
 | `create-cli` | Project scaffolding wizard |
 
 ## License

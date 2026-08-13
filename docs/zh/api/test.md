@@ -1,11 +1,11 @@
-# @cliff/test
+# @cliffx/test
 
 测试包提供 CLI 命令集成测试的工具。
 
 ## 安装
 
 ```bash
-pnpm add -D @cliff/test
+pnpm add -D @cliffx/test
 ```
 
 ## `createTestApp`
@@ -13,8 +13,8 @@ pnpm add -D @cliff/test
 创建测试友好的 CLI 实例，捕获所有输出。
 
 ```ts
-import { createTestApp } from '@cliff/test';
-import { defineCommand } from '@cliff/core';
+import { createTestApp } from '@cliffx/test';
+import { defineCommand } from '@cliffx/core';
 
 const app = createTestApp({
   commands: [
@@ -67,8 +67,8 @@ interface RunResult {
 
 ```ts
 import { describe, it, expect } from 'vitest';
-import { createTestApp } from '@cliff/test';
-import { defineCommand } from '@cliff/core';
+import { createTestApp } from '@cliffx/test';
+import { defineCommand } from '@cliffx/core';
 
 describe('greet', () => {
   const app = createTestApp({

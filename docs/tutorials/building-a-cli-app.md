@@ -39,7 +39,7 @@ api-cli/
 Edit `src/index.ts`:
 
 ```ts
-import { createCli } from '@cliff/core';
+import { createCli } from '@cliffx/core';
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 
@@ -60,7 +60,7 @@ await cli.run();
 Create `src/commands/request.ts`:
 
 ```ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'request',
@@ -121,7 +121,7 @@ src/commands/
 Create `src/commands/collection/list.ts`:
 
 ```ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 import { readFileSync, existsSync } from 'node:fs';
 
 export default defineCommand({

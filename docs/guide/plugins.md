@@ -7,7 +7,7 @@ Extend your CLI with a first-class plugin system. Plugins can add commands, life
 Use `definePlugin` for type-safe plugin definitions:
 
 ```ts
-import { definePlugin } from '@cliff/core';
+import { definePlugin } from '@cliffx/core';
 
 export default definePlugin({
   name: '@my-tool/plugin-docker',
@@ -60,7 +60,7 @@ await cli.run();
 ## Loading Plugins
 
 ```ts
-import { createCli } from '@cliff/core';
+import { createCli } from '@cliffx/core';
 import dockerPlugin from '@my-tool/plugin-docker';
 
 const cli = createCli({
@@ -93,7 +93,7 @@ my-tool docker:build --tag latest
 Plugins are fully typed:
 
 ```ts
-import type { Plugin } from '@cliff/core';
+import type { Plugin } from '@cliffx/core';
 
 const plugin: Plugin = {
   name: 'my-plugin',

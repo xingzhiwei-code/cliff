@@ -1,4 +1,4 @@
-import { c, dim } from '@cliff/ui';
+import { c, dim } from '@cliffx/ui';
 
 interface UpdateInfo {
   current: string;

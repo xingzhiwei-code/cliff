@@ -25,7 +25,7 @@ Spinner 自动：
 如需更多控制，直接使用 `Spinner` 类：
 
 ```ts
-import { Spinner } from '@cliff/ui';
+import { Spinner } from '@cliffx/ui';
 
 const spin = new Spinner('加载中...');
 spin.start();
@@ -65,7 +65,7 @@ await ui.progress(items.length, async (tick) => {
 如需更多控制，直接使用 `Progress` 类：
 
 ```ts
-import { Progress } from '@cliff/ui';
+import { Progress } from '@cliffx/ui';
 
 const bar = new Progress({ total: 100, width: 40 });
 

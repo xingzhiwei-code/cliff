@@ -1,4 +1,4 @@
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { homedir } from 'node:os';
@@ -115,7 +115,7 @@ export default defineCommand({
         method,
         url,
         headers: String(options.headers),
-        body: String(options.body),
+        body: options.body ? String(options.body) : '',
       };
       saveCollections(collections);
       ui.log(`Saved request "${name}" to collection.`);

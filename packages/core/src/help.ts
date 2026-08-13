@@ -1,4 +1,4 @@
- import { c, dim } from '@cliff/ui';
+ import { c, dim } from '@cliffx/ui';
  import type { Command } from './types';
  
  /** Generate formatted help text for a command. */

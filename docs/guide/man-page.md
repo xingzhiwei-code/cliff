@@ -5,7 +5,7 @@ cliff can generate Unix man pages in troff format for your CLI tool.
 ## Generating a Man Page
 
 ```ts
-import { generateManPage, printManPage } from '@cliff/core';
+import { generateManPage, printManPage } from '@cliffx/core';
 
 // Generate as a string
 const manPage = generateManPage('my-tool', '1.0.0', 'My CLI tool', cli.getCommands());

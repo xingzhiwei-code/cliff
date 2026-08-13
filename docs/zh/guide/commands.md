@@ -5,7 +5,7 @@
 ## 定义命令
 
 ```ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'deploy',

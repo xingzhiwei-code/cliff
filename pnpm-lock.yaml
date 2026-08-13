@@ -32,10 +32,10 @@ importers:
 
   apps/api-cli:
     dependencies:
-      '@cliff/core':
+      '@cliffx/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@cliff/ui':
+      '@cliffx/ui':
         specifier: workspace:*
         version: link:../../packages/ui
     devDependencies:
@@ -45,7 +45,7 @@ importers:
 
   packages/core:
     dependencies:
-      '@cliff/ui':
+      '@cliffx/ui':
         specifier: workspace:*
         version: link:../ui
     devDependencies:
@@ -55,7 +55,7 @@ importers:
 
   packages/create-cli:
     dependencies:
-      '@cliff/ui':
+      '@cliffx/ui':
         specifier: workspace:*
         version: link:../ui
     devDependencies:
@@ -65,10 +65,10 @@ importers:
 
   packages/plugin-docker:
     dependencies:
-      '@cliff/core':
+      '@cliffx/core':
         specifier: workspace:*
         version: link:../core
-      '@cliff/ui':
+      '@cliffx/ui':
         specifier: workspace:*
         version: link:../ui
     devDependencies:
@@ -78,7 +78,7 @@ importers:
 
   packages/test:
     dependencies:
-      '@cliff/core':
+      '@cliffx/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:

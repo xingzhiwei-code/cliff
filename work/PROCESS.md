@@ -43,7 +43,7 @@ pnpm changeset    # 创建 changeset
 ```
 cli-framework/
   packages/
-    core/                  # @cliff/core — 命令系统、参数解析、插件、补全
+    core/                  # @cliffx/core — 命令系统、参数解析、插件、补全
       src/
         cli.ts              # Cli 类：注册、发现、运行、生命周期
         command.ts          # defineCommand 类型安全 API
@@ -52,7 +52,7 @@ cli-framework/
         error.ts            # 错误美化 + 堆栈折叠
         types.ts            # 全部类型定义
         __demo__/           # 端到端 demo（demo.ts + commands/）
-    ui/                    # @cliff/ui — 输出组件、交互组件
+    ui/                    # @cliffx/ui — 输出组件、交互组件
       src/
         color.ts            # ANSI 颜色 + 链式 builder
         output.ts           # log/success/warn/error/info/section/newline/stdout
@@ -66,7 +66,7 @@ cli-framework/
       src/
         index.ts            # 交互式创建流程（项目名→包管理器→语言→模板→生成）
         templates/          # 项目模板（待完善）
-    test/                  # @cliff/test — 测试工具
+    test/                  # @cliffx/test — 测试工具
       src/
         index.ts            # createTestApp（stdout/stderr/exitCode 捕获）
   work/
@@ -91,7 +91,7 @@ cli-framework/
 - 环境变量：`UPPER_SNAKE_CASE`（`MY_DEPLOY_DRY_RUN`）
 - 配置键：`camelCase`（`dryRun: true`）
 - 文件名：`kebab-case`（`deploy-status.ts`）
-- 包名：`@cliff/xxx`
+- 包名：`@cliffx/xxx`
 
 ### 退出码
 
@@ -131,7 +131,7 @@ cli-framework/
 - [x] 配置 changesets
 - [x] 创建各包 package.json
 
-#### 2. @cliff/ui ✅
+#### 2. @cliffx/ui ✅
 - [x] 输出组件
   - [x] `log` / `success` / `warn` / `error` / `info`（ANSI 颜色）
   - [x] `table`（自动对齐表格，box-drawing 字符）
@@ -147,7 +147,7 @@ cli-framework/
 - [x] 单元测试（color.test.ts，6 tests）
 - [x] `multiselect` 已补上 ✅
 
-#### 3. @cliff/core ✅
+#### 3. @cliffx/core ✅
 - [x] 参数解析器
   - [x] 类型定义（string / boolean / number / enum）
   - [x] 默认值
@@ -172,7 +172,7 @@ cli-framework/
 - [x] 项目模板（basic / subcommands / full）
 - [x] 已评估：包发布到 npm 后一行代码加回
 
-#### 5. @cliff/test ✅
+#### 5. @cliffx/test ✅
 - [x] `createTestApp` API
 - [x] 模拟终端 I/O（stdout/stderr 捕获 + process.exit 拦截）
 - [x] 断言工具（返回 `RunResult` 类型，配合 vitest 使用）
@@ -220,10 +220,10 @@ cli-framework/
 |------|------|------|
 | 2026-08-11 | 创建 PRD + PROCESS | — |
 | 2026-08-11 | Monorepo 骨架搭建完成（4 包全部构建通过） | — |
-| 2026-08-11 | @cliff/ui 实现完成（8 个模块，零依赖） | — |
-| 2026-08-11 | @cliff/core 实现完成（命令系统、解析器、help、错误处理） | — |
+| 2026-08-11 | @cliffx/ui 实现完成（8 个模块，零依赖） | — |
+| 2026-08-11 | @cliffx/core 实现完成（命令系统、解析器、help、错误处理） | — |
 | 2026-08-11 | create-cli 脚手架实现完成（交互流程 + 3 种模板） | — |
-| 2026-08-11 | @cliff/test 实现完成（createTestApp + I/O 捕获） | — |
+| 2026-08-11 | @cliffx/test 实现完成（createTestApp + I/O 捕获） | — |
 | 2026-08-11 | 端到端 demo 验证通过（--help / --version / deploy / config） | — |
 | 2026-08-11 | Phase 1 MVP 完成，4 个遗留项记录 | — |
 

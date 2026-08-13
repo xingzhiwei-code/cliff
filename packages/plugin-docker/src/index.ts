@@ -1,4 +1,4 @@
-import type { Plugin } from '@cliff/core';
+import type { Plugin } from '@cliffx/core';
 import { execSync } from 'node:child_process';
 
 function docker(args: string): string {
@@ -27,7 +27,7 @@ async function runDocker(args: string): Promise<string> {
 }
 
 export const pluginDocker: Plugin = {
-  name: '@cliff/plugin-docker',
+  name: '@cliffx/plugin-docker',
 
   hooks: {
     'before:run': async () => {

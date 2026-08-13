@@ -30,7 +30,7 @@ my-tool completion > ~/.config/fish/completions/my-tool.fish
 可以通过编程方式生成补全脚本：
 
 ```ts
-import { generateCompletion, printCompletion } from '@cliff/core';
+import { generateCompletion, printCompletion } from '@cliffx/core';
 
 // 生成字符串
 const script = generateCompletion(cli);

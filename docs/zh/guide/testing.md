@@ -5,8 +5,8 @@ cliff 内置测试工具。像写单元测试一样为 CLI 编写集成测试。
 ## 设置
 
 ```ts
-import { createTestApp } from '@cliff/test';
-import { defineCommand } from '@cliff/core';
+import { createTestApp } from '@cliffx/test';
+import { defineCommand } from '@cliffx/core';
 
 const app = createTestApp({
   commands: [

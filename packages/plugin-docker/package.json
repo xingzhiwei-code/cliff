@@ -1,5 +1,5 @@
 {
-  "name": "@cliff/plugin-docker",
+  "name": "@cliffx/plugin-docker",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -17,8 +17,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@cliff/core": "workspace:*",
-    "@cliff/ui": "workspace:*"
+    "@cliffx/core": "workspace:*",
+    "@cliffx/ui": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.3.0"

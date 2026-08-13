@@ -34,7 +34,7 @@ const cli = createCli({
 也可以直接使用检查函数：
 
 ```ts
-import { checkForUpdates } from '@cliff/core';
+import { checkForUpdates } from '@cliffx/core';
 
 const result = await checkForUpdates('my-tool', '1.0.0');
 if (result?.outdated) {

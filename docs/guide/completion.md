@@ -30,7 +30,7 @@ Completion is generated automatically from your command definitions:
 You can generate completion scripts programmatically:
 
 ```ts
-import { generateCompletion, printCompletion } from '@cliff/core';
+import { generateCompletion, printCompletion } from '@cliffx/core';
 
 // Generate as a string
 const script = generateCompletion(cli);

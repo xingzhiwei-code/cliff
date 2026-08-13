@@ -1,4 +1,4 @@
-// @cliff/core — Command system, parser, plugin engine
+// @cliffx/core — Command system, parser, plugin engine
 export { defineCommand } from './command';
 export { definePlugin, discoverPlugins } from './plugin';
 export { Cli, createCli } from './cli';

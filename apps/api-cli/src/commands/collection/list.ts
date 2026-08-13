@@ -1,4 +1,4 @@
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { homedir } from 'node:os';

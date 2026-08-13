@@ -57,7 +57,7 @@ async run({ config, ui }) {
 `loadConfig` 函数也可直接导出使用：
 
 ```ts
-import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliff/core';
+import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliffx/core';
 
 const config = loadConfig('my-tool');
 // config.values → { env: 'production', ... }

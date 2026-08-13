@@ -25,7 +25,7 @@ The spinner automatically:
 For more control, use the `Spinner` class directly:
 
 ```ts
-import { Spinner } from '@cliff/ui';
+import { Spinner } from '@cliffx/ui';
 
 const spin = new Spinner('Loading...');
 spin.start();
@@ -65,7 +65,7 @@ Output:
 For more control, use the `Progress` class directly:
 
 ```ts
-import { Progress } from '@cliff/ui';
+import { Progress } from '@cliffx/ui';
 
 const bar = new Progress({ total: 100, width: 40 });
 

@@ -5,8 +5,8 @@ CLI Framework ships with a built-in test harness. Write integration tests for yo
 ## Setup
 
 ```ts
-import { createTestApp } from '@cliff/test';
-import { defineCommand } from '@cliff/core';
+import { createTestApp } from '@cliffx/test';
+import { defineCommand } from '@cliffx/core';
 
 const app = createTestApp({
   commands: [

@@ -1,6 +1,6 @@
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { confirm, input, select, success, error, info, section, spinner, c } from '@cliff/ui';
+import { confirm, input, select, success, error, info, section, spinner, c } from '@cliffx/ui';
 import { generateProject } from './generate';
 import type { GenerateOptions } from './generate';
 

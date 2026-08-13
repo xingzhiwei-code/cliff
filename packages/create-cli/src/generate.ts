@@ -75,8 +75,8 @@
        start: 'node dist/index.js',
      },
      dependencies: {
-       '@cliff/core': 'latest',
-       '@cliff/ui': 'latest',
+       '@cliffx/core': 'latest',
+       '@cliffx/ui': 'latest',
      },
      devDependencies: typescript
        ? { typescript: '^5.6.0', tsup: '^8.3.0', '@types/node': '^22.0.0', tsx: '^4.0.0' }
@@ -109,7 +109,7 @@
  
  function createEntry(name: string, ext: string, template: string): string {
    if (template === 'basic') {
-     return `import { createCli, defineCommand } from '@cliff/core';
+     return `import { createCli, defineCommand } from '@cliffx/core';
  
  const hello = defineCommand({
    name: 'hello',
@@ -129,7 +129,7 @@
  cli.run();
  `;
    }
-   return `import { createCli } from '@cliff/core';
+   return `import { createCli } from '@cliffx/core';
  
  const cli = createCli({
    name: '${name}',
@@ -144,7 +144,7 @@
  }
  
  function createHelloCmd(ext: string): string {
-   return `import { defineCommand } from '@cliff/core';
+   return `import { defineCommand } from '@cliffx/core';
  
  export default defineCommand({
    name: 'hello',
@@ -164,7 +164,7 @@
  }
  
  function createByeCmd(ext: string): string {
-   return `import { defineCommand } from '@cliff/core';
+   return `import { defineCommand } from '@cliffx/core';
  
  export default defineCommand({
    name: 'bye',

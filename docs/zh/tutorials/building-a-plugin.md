@@ -1,6 +1,6 @@
 # 开发一个插件
 
-本教程从零开始构建 `@cliff/plugin-docker` — 一个为 CLI 添加 5 个 Docker 命令的插件。你将学习 `definePlugin`、生命周期钩子和命令注册。
+本教程从零开始构建 `@cliffx/plugin-docker` — 一个为 CLI 添加 5 个 Docker 命令的插件。你将学习 `definePlugin`、生命周期钩子和命令注册。
 
 ## 你将构建什么
 
@@ -28,7 +28,7 @@ packages/plugin-docker/
 
 ```json
 {
-  "name": "@cliff/plugin-docker",
+  "name": "@cliffx/plugin-docker",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -37,8 +37,8 @@ packages/plugin-docker/
     "build": "tsup src/index.ts --format esm --dts --clean"
   },
   "dependencies": {
-    "@cliff/core": "workspace:*",
-    "@cliff/ui": "workspace:*"
+    "@cliffx/core": "workspace:*",
+    "@cliffx/ui": "workspace:*"
   }
 }
 ```
@@ -48,7 +48,7 @@ packages/plugin-docker/
 创建 `src/index.ts`：
 
 ```ts
-import type { Plugin } from '@cliff/core';
+import type { Plugin } from '@cliffx/core';
 import { execSync } from 'node:child_process';
 
 function docker(args: string): string {
@@ -63,7 +63,7 @@ function checkDockerDaemon(): boolean {
 }
 
 export const pluginDocker: Plugin = {
-  name: '@cliff/plugin-docker',
+  name: '@cliffx/plugin-docker',
 
   hooks: {
     'before:run': async () => {
@@ -101,8 +101,8 @@ export default pluginDocker;
 在 CLI 入口文件中：
 
 ```ts
-import { createCli } from '@cliff/core';
-import pluginDocker from '@cliff/plugin-docker';
+import { createCli } from '@cliffx/core';
+import pluginDocker from '@cliffx/plugin-docker';
 
 const cli = createCli({
   name: 'my-tool',
@@ -117,7 +117,7 @@ await cli.run();
 
 **`definePlugin`** 提供类型安全的插件定义。你也可以直接使用 `Plugin` 接口 — `definePlugin` 只是一个便利包装。
 
-**命令命名** — 插件命令使用插件名称作为命名空间前缀。`@cliff/plugin-docker` → `docker:build`、`docker:push` 等。
+**命令命名** — 插件命令使用插件名称作为命名空间前缀。`@cliffx/plugin-docker` → `docker:build`、`docker:push` 等。
 
 **生命周期钩子** 在 CLI 生命周期的特定节点触发：
 - `before:run` — 命令执行前触发（适合做校验）

@@ -79,7 +79,7 @@ const token = await ui.password('输入 API 令牌');
 多步向导：
 
 ```ts
-import { steps } from '@cliff/ui';
+import { steps } from '@cliffx/ui';
 
 const results = await ui.steps([
   {

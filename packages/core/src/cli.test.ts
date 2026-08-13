@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { Cli, createCli } from './cli';
 import { defineCommand } from './command';
-import { stripColor } from '@cliff/ui';
+import { stripColor } from '@cliffx/ui';
 
 class TestExit extends Error {
   constructor(public code: number) {

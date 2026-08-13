@@ -1,4 +1,4 @@
-// @cliff/ui — Output and interactive terminal components
+// @cliffx/ui — Output and interactive terminal components
 export { log, success, warn, error, info, section, newline, stdout } from './output';
 export { table } from './table';
 export type { TableOptions } from './table';

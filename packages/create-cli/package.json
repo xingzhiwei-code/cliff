@@ -1,21 +1,41 @@
- {
-   "name": "create-cli",
-   "version": "0.0.1",
-   "type": "module",
-   "main": "./dist/index.js",
-   "bin": {
-     "create-cli": "./dist/index.js"
-   },
-   "files": ["dist", "templates"],
-   "scripts": {
-     "dev": "tsup src/index.ts --format esm --dts --watch",
-     "build": "tsup src/index.ts --format esm --dts --clean",
-     "test": "vitest run"
-   },
-   "dependencies": {
-     "@cliff/ui": "workspace:*"
-   },
-   "devDependencies": {
-     "tsup": "^8.3.0"
-   }
- }
+{
+  "name": "create-cli",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "create-cli": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@cliffx/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0"
+  },
+  "description": "Scaffold a new CLI project with cliff",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "scaffold",
+    "create",
+    "generator",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xingzhiwei-code/cliff.git"
+  },
+  "homepage": "https://xingzhiwei-code.github.io/cliff/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

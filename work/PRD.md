@@ -106,7 +106,7 @@
  
  ```typescript
  // commands/deploy.ts
- import { defineCommand } from '@cliff/core';
+ import { defineCommand } from '@cliffx/core';
  
  export default defineCommand({
    name: 'deploy',
@@ -233,7 +233,7 @@
  ```
  ✖ Error: Connection refused to api.example.com:443
    at deploy (commands/deploy.ts:12:5)
-   at Command.run (node_modules/@cliff/core/...)
+   at Command.run (node_modules/@cliffx/core/...)
  
    Tip: Check your network connection and try again.
  ```
@@ -272,7 +272,7 @@
  ### 5.9 测试工具
  
  ```typescript
- import { createTestApp } from '@cliff/test';
+ import { createTestApp } from '@cliffx/test';
  
  const app = createTestApp({ commands: './commands' });
  
@@ -302,7 +302,7 @@
  ```
  cli-framework/
    packages/
-     core/                  # @cliff/core
+     core/                  # @cliffx/core
        src/
          command.ts         # defineCommand, 命令注册
          parser.ts          # 参数解析（基于 yargs 封装）
@@ -313,7 +313,7 @@
          error.ts           # 错误处理 + 美化
          update.ts          # 更新通知
          index.ts
-     ui/                    # @cliff/ui
+     ui/                    # @cliffx/ui
        src/
          output.ts          # log / success / warn / error
          table.ts           # 表格渲染
@@ -326,7 +326,7 @@
        src/
          index.ts
          templates/         # 项目模板
-     test/                  # @cliff/test
+     test/                  # @cliffx/test
        src/
          app.ts             # createTestApp
          index.ts

@@ -1,12 +1,12 @@
-import { createCli } from '@cliff/core';
-import type { CommandDef } from '@cliff/core';
+import { createCli } from '@cliffx/core';
+import type { CommandDef } from '@cliffx/core';
 import requestCommand from './commands/request';
 import collectionList from './commands/collection/list';
 import collectionRun from './commands/collection/run';
 import collectionDelete from './commands/collection/delete';
 
 const cli = createCli({
-  name: 'api',
+  name: 'poke',
   version: '0.0.1',
   description: 'API debugging tool — curl for the TypeScript era',
 });

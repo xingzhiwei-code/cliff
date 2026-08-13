@@ -7,7 +7,7 @@
 使用 `definePlugin` 获得类型安全的插件定义：
 
 ```ts
-import { definePlugin } from '@cliff/core';
+import { definePlugin } from '@cliffx/core';
 
 export default definePlugin({
   name: '@my-tool/plugin-docker',
@@ -60,7 +60,7 @@ await cli.run();
 ## 加载插件
 
 ```ts
-import { createCli } from '@cliff/core';
+import { createCli } from '@cliffx/core';
 import dockerPlugin from '@my-tool/plugin-docker';
 
 const cli = createCli({
@@ -93,7 +93,7 @@ my-tool docker:build --tag latest
 插件具有完整的类型支持：
 
 ```ts
-import type { Plugin } from '@cliff/core';
+import type { Plugin } from '@cliffx/core';
 
 const plugin: Plugin = {
   name: 'my-plugin',

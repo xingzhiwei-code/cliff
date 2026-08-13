@@ -71,9 +71,9 @@ export default defineConfig({
             {
               text: '包',
               items: [
-                { text: '@cliff/core', link: '/zh/api/core' },
-                { text: '@cliff/ui', link: '/zh/api/ui' },
-                { text: '@cliff/test', link: '/zh/api/test' },
+                { text: '@cliffx/core', link: '/zh/api/core' },
+                { text: '@cliffx/ui', link: '/zh/api/ui' },
+                { text: '@cliffx/test', link: '/zh/api/test' },
                 { text: 'create-cli', link: '/zh/api/create-cli' },
               ],
             },
@@ -140,9 +140,9 @@ export default defineConfig({
         {
           text: 'Packages',
           items: [
-            { text: '@cliff/core', link: '/api/core' },
-            { text: '@cliff/ui', link: '/api/ui' },
-            { text: '@cliff/test', link: '/api/test' },
+            { text: '@cliffx/core', link: '/api/core' },
+            { text: '@cliffx/ui', link: '/api/ui' },
+            { text: '@cliffx/test', link: '/api/test' },
             { text: 'create-cli', link: '/api/create-cli' },
           ],
         },

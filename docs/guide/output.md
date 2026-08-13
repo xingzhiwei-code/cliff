@@ -5,7 +5,7 @@ CLI Framework provides a full set of terminal output components — no chalk, no
 ## Basic Output
 
 ```ts
-import { log, success, warn, error, info } from '@cliff/ui';
+import { log, success, warn, error, info } from '@cliffx/ui';
 
 ui.log('Processing files...');     // │ Processing files...
 ui.success('Build complete!');     // ✔ Build complete!
@@ -17,7 +17,7 @@ ui.info('Using default settings'); // ℹ Using default settings
 ## Section Headers
 
 ```ts
-import { section } from '@cliff/ui';
+import { section } from '@cliffx/ui';
 
 ui.section('Deployment');
 // Deploying
@@ -29,7 +29,7 @@ ui.section('Deployment');
 Display tabular data with automatic alignment:
 
 ```ts
-import { table } from '@cliff/ui';
+import { table } from '@cliffx/ui';
 
 const results = [
   { name: 'main.js', size: '42K', time: '1.2s' },
@@ -79,7 +79,7 @@ ui.stdout(JSON.stringify(result));
 Low-level color functions are also available:
 
 ```ts
-import { c, red, green, blue, yellow, cyan, gray, dim, bold, underline } from '@cliff/ui';
+import { c, red, green, blue, yellow, cyan, gray, dim, bold, underline } from '@cliffx/ui';
 
 // Chainable builder
 console.log(c('Success!').green().bold().toString());

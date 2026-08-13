@@ -22,7 +22,7 @@
    /** Resolved options with defaults applied. */
    options: ResolvedOptions<TOptions>;
    /** UI toolkit for output and interaction. */
-   ui: import('@cliff/ui').Ui;
+   ui: import('@cliffx/ui').Ui;
    /** Loaded config (from file + env). */
    config: Record<string, unknown>;
    /** Raw CLI arguments. */

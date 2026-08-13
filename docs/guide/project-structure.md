@@ -34,7 +34,7 @@ my-tool/
 Create your CLI entry point at `src/index.ts`:
 
 ```ts
-import { createCli } from '@cliff/core';
+import { createCli } from '@cliffx/core';
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 

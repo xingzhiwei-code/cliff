@@ -1,6 +1,6 @@
  import { describe, it, expect } from 'vitest';
  import { generateHelp, generateRootHelp } from './help';
- import { stripColor } from '@cliff/ui';
+ import { stripColor } from '@cliffx/ui';
  import type { Command } from './types';
  
  describe('generateHelp', () => {

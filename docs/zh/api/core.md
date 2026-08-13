@@ -1,11 +1,11 @@
-# @cliff/core
+# @cliffx/core
 
 核心包提供命令系统、参数解析器、帮助生成器、错误处理、配置管理和 Shell 补全。
 
 ## 安装
 
 ```bash
-pnpm add @cliff/core
+pnpm add @cliffx/core
 ```
 
 ## 导出
@@ -15,7 +15,7 @@ pnpm add @cliff/core
 定义命令，具有完整的选项类型推断。
 
 ```ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'deploy',
@@ -48,7 +48,7 @@ export default defineCommand({
 创建 CLI 实例。
 
 ```ts
-import { createCli } from '@cliff/core';
+import { createCli } from '@cliffx/core';
 
 const cli = createCli({
   name: 'my-tool',
@@ -90,7 +90,7 @@ const cli = createCli({
 根据选项定义解析原始 argv 字符串。
 
 ```ts
-import { parseArgs } from '@cliff/core';
+import { parseArgs } from '@cliffx/core';
 
 const options = parseArgs(['--env', 'prod', '--force'], {
   env: { type: 'string', default: 'staging' },
@@ -105,7 +105,7 @@ const options = parseArgs(['--env', 'prod', '--force'], {
 生成格式化的帮助文本。
 
 ```ts
-import { generateHelp, generateRootHelp } from '@cliff/core';
+import { generateHelp, generateRootHelp } from '@cliffx/core';
 
 const helpText = generateHelp(command, 'my-tool');
 const rootHelp = generateRootHelp('my-tool', '1.0.0', '描述', cmds);
@@ -116,7 +116,7 @@ const rootHelp = generateRootHelp('my-tool', '1.0.0', '描述', cmds);
 生成 Shell 补全脚本。
 
 ```ts
-import { generateCompletion, printCompletion } from '@cliff/core';
+import { generateCompletion, printCompletion } from '@cliffx/core';
 
 const script = generateCompletion(cli);
 printCompletion(cli); // 输出到 stdout
@@ -127,7 +127,7 @@ printCompletion(cli); // 输出到 stdout
 配置管理工具。
 
 ```ts
-import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliff/core';
+import { loadConfig, loadEnv, envPrefix, resolveOptions } from '@cliffx/core';
 
 const config = loadConfig('my-tool');
 // { values: { env: 'production' }, source: '/path/.my-tool.yml' }
@@ -143,7 +143,7 @@ const final = resolveOptions(cliArgs, env, config.values, optionsDef);
 错误格式化工具。
 
 ```ts
-import { prettyError, getErrorHint } from '@cliff/core';
+import { prettyError, getErrorHint } from '@cliffx/core';
 
 const formatted = prettyError(new Error('出错了'));
 const hint = getErrorHint(new Error('连接被拒绝'));
@@ -156,7 +156,7 @@ const hint = getErrorHint(new Error('连接被拒绝'));
 import type {
   Command, CommandDef, OptionsDef, OptionDef, OptionType,
   RunContext, ResolvedOptions, Plugin, CliOptions,
-} from '@cliff/core';
+} from '@cliffx/core';
 ```
 
 | 类型 | 说明 |

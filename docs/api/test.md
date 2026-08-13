@@ -1,11 +1,11 @@
-# @cliff/test
+# @cliffx/test
 
 The test package provides utilities for integration testing your CLI commands.
 
 ## Installation
 
 ```bash
-pnpm add -D @cliff/test
+pnpm add -D @cliffx/test
 ```
 
 ## `createTestApp`
@@ -13,8 +13,8 @@ pnpm add -D @cliff/test
 Create a test-friendly CLI instance that captures all output.
 
 ```ts
-import { createTestApp } from '@cliff/test';
-import { defineCommand } from '@cliff/core';
+import { createTestApp } from '@cliffx/test';
+import { defineCommand } from '@cliffx/core';
 
 const app = createTestApp({
   commands: [
@@ -67,8 +67,8 @@ interface RunResult {
 
 ```ts
 import { describe, it, expect } from 'vitest';
-import { createTestApp } from '@cliff/test';
-import { defineCommand } from '@cliff/core';
+import { createTestApp } from '@cliffx/test';
+import { defineCommand } from '@cliffx/core';
 
 describe('greet', () => {
   const app = createTestApp({

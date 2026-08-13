@@ -50,7 +50,7 @@ my-tool/
 
 ```ts
 // src/commands/hello.ts
-import { defineCommand } from '@cliff/core';
+import { defineCommand } from '@cliffx/core';
 
 export default defineCommand({
   name: 'hello',
